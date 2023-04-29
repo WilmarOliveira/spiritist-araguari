@@ -1,15 +1,14 @@
 import React from 'react';
-import GlobalStyle from './theme/globalStyle';
 import { Header } from './components/Header';
 import { Home } from './pages/Home';
+import { Theme } from './theme/Theme';
  
 function App() {
   return (
-    <>
-      <GlobalStyle />
+    <Theme>
       <Header />
       <Home />
-    </>
+    </Theme>
   );
 }
  
