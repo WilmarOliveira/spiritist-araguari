@@ -1,9 +1,15 @@
-import { ContainerHome } from "./styles"
+import { Card } from "../../components/Card"
+import { ContainerCard, ContainerHome } from "./styles"
 
 export const Home = () => {
     return(
         <ContainerHome>
-            <div>Home Page</div>
+            <ContainerCard>
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+            </ContainerCard>
         </ContainerHome>
     )
 }
