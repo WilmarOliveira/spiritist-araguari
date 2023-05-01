@@ -11,7 +11,3 @@ export const Caption = styled.h4`
    padding-top: 20px;
    padding-bottom: 10px;
 `
-
-export const Description = styled.p`
-   text-align: justify;
-`

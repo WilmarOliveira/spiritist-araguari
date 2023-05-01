@@ -3,10 +3,13 @@ import { TableActivities } from '../../components/TableActivities'
 import { TableOtherActivities } from '../../components/TableOtherActivities'
 import mainActivities from '../../mocks/mainActivities.json'
 import otherActivities from '../../mocks/otherActivities.json'
-import { Caption, ContainerAbout, Description } from './styles'
+import { Caption, ContainerAbout } from './styles'
+import { useState } from 'react'
+import { ScrollDialog } from '../../components/ScrollDialog'
 
 export const About = () => {
    const { id } = useParams()
+   const [open, setOpen] = useState(false)
 
    return (
       <ContainerAbout>
@@ -16,32 +19,12 @@ export const About = () => {
          <Caption>Outras Atividades</Caption>
          <TableOtherActivities rows={otherActivities[id] || []} />
          <Caption>História</Caption>
-         <Description>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. <br />
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
-         </Description>
+         <button onClick={setOpen}>
+            Clique aqui para ver a história do centro
+         </button>
          <Caption>Contato</Caption>
          <span>Nome: (34) 0000-0000</span>
+         <ScrollDialog open={open} setOpen={setOpen} />
       </ContainerAbout>
    )
 }
