@@ -8,7 +8,7 @@ import { StyledCard } from './styles';
 
 export const Card = () => {
     return (
-        <StyledCard sx={{ maxWidth: 345 }}>
+        <StyledCard >
             <CardMedia
                 sx={{ height: 140 }}
                 image="/static/images/cards/contemplative-reptile.jpg"
