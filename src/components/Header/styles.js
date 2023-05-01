@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const ContainerHeader = styled.div`
@@ -9,6 +10,8 @@ export const ContainerHeader = styled.div`
    height: 60px;
 `
 
-export const TitleHeader = styled.h1`
+export const TitleHeader = styled(Link)`
+   color: #fff;
+   font-weight: bold;
    font-size: 26px;
 `

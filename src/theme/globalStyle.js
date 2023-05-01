@@ -14,4 +14,7 @@ export default createGlobalStyle`
         font-size: 14px;
         -webkit-font-smoothing: antialiased !important;
     }
+    a {
+        text-decoration: none;
+    }
 `

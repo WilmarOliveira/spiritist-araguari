@@ -28,7 +28,7 @@ export const TableOtherActivities = ({ rows }) => {
                         {row.place}
                      </TableCell>
                      <TableCell>{row.weekday}</TableCell>
-                     <TableCell>{row.hour}</TableCell>
+                     <TableCell>{row.time}</TableCell>
                      <TableCell>{row.activities}</TableCell>
                   </TableRow>
                ))}
