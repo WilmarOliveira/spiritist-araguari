@@ -1,13 +1,13 @@
-import React from 'react';
-import { Theme } from './theme/Theme';
-import { AppRoutes } from './routes';
- 
+import React from 'react'
+import { Theme } from './theme/Theme'
+import { AppRoutes } from './routes'
+
 function App() {
-  return (
-    <Theme>
-      <AppRoutes />
-    </Theme>
-  );
+   return (
+      <Theme>
+         <AppRoutes />
+      </Theme>
+   )
 }
- 
-export default App;
+
+export default App

@@ -1,0 +1,12 @@
+{
+    "caminho-da-luz": 
+        [
+            {
+                "id": 1,
+                "place": "Galpão da Sopa",
+                "weekday": "Domingo",
+                "time": "12:00",
+                "activities": "Distribuição da Sopa"
+            }
+        ]
+}

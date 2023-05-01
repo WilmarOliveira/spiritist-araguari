@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ContainerCard = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-`;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+`

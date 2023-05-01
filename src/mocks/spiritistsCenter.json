@@ -1,0 +1,22 @@
+[
+    {
+        "id":"caminho-da-luz", 
+        "name": "Caminho da Luz", 
+        "image":""
+    }, 
+    {
+        "id":"batuira", 
+        "name": "Batuíra", 
+        "image":""
+    },
+    {
+        "id":"padre-zabeu", 
+        "name": "Padre Zabeu", 
+        "image":""
+    },
+    {
+        "id":"missionarios-de-allah", 
+        "name": "Missionários de Alah", 
+        "image":""
+    }
+]
