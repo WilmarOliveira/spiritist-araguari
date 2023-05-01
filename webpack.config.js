@@ -6,6 +6,7 @@ module.exports = {
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "build"),
+    publicPath: "/",
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -16,6 +17,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, "build"),
     },
+    historyApiFallback: true,
     port: 3000,
   },
   module: {

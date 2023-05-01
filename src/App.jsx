@@ -1,15 +1,11 @@
 import React from 'react';
-import { Header } from './components/Header';
-import { Home } from './pages/Home';
 import { Theme } from './theme/Theme';
-import { Footer } from './components/Footer';
+import { AppRoutes } from './routes';
  
 function App() {
   return (
     <Theme>
-      <Header />
-      <Home />
-      <Footer />
+      <AppRoutes />
     </Theme>
   );
 }
