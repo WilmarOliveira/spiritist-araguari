@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import Button from '@mui/material/Button'
 import Dialog from '@mui/material/Dialog'
 import DialogActions from '@mui/material/DialogActions'
 import DialogContent from '@mui/material/DialogContent'
@@ -48,7 +47,7 @@ export const ScrollDialog = ({ open, setOpen }) => {
             </DialogContentText>
          </DialogContent>
          <DialogActions>
-            <Button onClick={() => setOpen(false)}>Fechar</Button>
+            <button onClick={() => setOpen(false)}>Fechar</button>
          </DialogActions>
       </Dialog>
    )

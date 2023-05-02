@@ -22,9 +22,7 @@ export const Card = ({ name, image, id }) => {
             </Typography>
          </CardContent>
          <CardActions>
-            <Button onClick={handleOnNavigate} size="small">
-               Saiba Mais
-            </Button>
+            <button onClick={handleOnNavigate}>Saiba Mais</button>
          </CardActions>
       </StyledCard>
    )

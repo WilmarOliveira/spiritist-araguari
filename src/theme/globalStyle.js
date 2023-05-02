@@ -17,4 +17,17 @@ export default createGlobalStyle`
     a {
         text-decoration: none;
     }
+    button {
+        cursor: pointer;
+        background: ${(props) => props.theme.colors.color1};
+        color: #fff;
+        border-radius: 4px;
+        padding: 8px;
+        border: 0;
+
+        &:hover {
+            background: ${(props) => props.theme.colors.color1};
+            opacity: 0.8;
+        }
+    }
 `
