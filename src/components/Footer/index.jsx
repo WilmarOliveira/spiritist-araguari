@@ -3,7 +3,9 @@ import { ContainerFooter, TitleFooter } from './styles'
 export const Footer = () => {
    return (
       <ContainerFooter>
-         <TitleFooter>Araguari Espírita</TitleFooter>
+         <TitleFooter>
+            "Vivo, vivo e viverei, porque sou imortal" Cairbar Schutel
+         </TitleFooter>
       </ContainerFooter>
    )
 }

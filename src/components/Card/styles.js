@@ -6,5 +6,6 @@ export const StyledCard = styled(Card)`
    min-width: 270px;
    max-width: 270px;
    flex: 1 1 270px;
-   margin: 30px;
+   margin-top: 30px;
+   margin-bottom: 30px;
 `
