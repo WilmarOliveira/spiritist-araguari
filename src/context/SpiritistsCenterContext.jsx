@@ -1,6 +1,9 @@
 import { createContext, useEffect, useState } from 'react'
 import allSpiritistsCenter from '../mocks/spiritistsCenter.json'
 import caminhoDaLuz from '../mocks/caminho-da-luz.json'
+import batuira from '../mocks/batuira.json'
+import padreZabeu from '../mocks/padre-zabeu.json'
+import missionariosDeAlah from '../mocks/missionarios-de-alah.json'
 
 export const SpiritistsCenterContext = createContext({})
 
@@ -13,8 +16,17 @@ export const SpiritistsCenterProvider = ({ children }) => {
          case 'caminho-da-luz':
             verifyCenterHistory(caminhoDaLuz)
             return
+         case 'batuira':
+            verifyCenterHistory(batuira)
+            return
+         case 'padre-zabeu':
+            verifyCenterHistory(padreZabeu)
+            return
+         case 'missionarios-de-alah':
+            verifyCenterHistory(missionariosDeAlah)
+            return
          default:
-            verifyCenterHistory({})
+            setSpiritistCenter({})
             return
       }
    }

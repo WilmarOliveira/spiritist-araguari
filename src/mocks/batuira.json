@@ -1,0 +1,18 @@
+{
+    "id": "batuira",
+    "title": "Centro Espírita Batuíra",
+    "mainActivities": [
+        {
+            "id": 1,
+            "weekday": "Quarta-Feira",
+            "time": "20:00",
+            "activities": "Palestra e Passe"
+        }
+    ],
+    "otherActivities": [],
+    "history": "",
+    "contact": {
+        "name": "Exemplo",
+        "phone": "(34) 9 9999-9999"
+    }
+}

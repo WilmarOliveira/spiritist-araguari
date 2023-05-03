@@ -14,7 +14,6 @@ export const About = () => {
    const [open, setOpen] = useState(false)
 
    useEffect(() => {
-      console.log(id)
       handleOnSelectedSpiritistCenter(id)
    }, [])
 
@@ -23,8 +22,14 @@ export const About = () => {
          <h3>{spiritistCenter?.title}</h3>
          <Caption>Atividades no centro</Caption>
          <TableActivities rows={spiritistCenter?.mainActivities || []} />
-         <Caption>Outras Atividades</Caption>
-         <TableOtherActivities rows={spiritistCenter?.otherActivities || []} />
+         {(spiritistCenter.otherActivities || []).length > 0 && (
+            <>
+               <Caption>Outras Atividades</Caption>
+               <TableOtherActivities
+                  rows={spiritistCenter?.otherActivities || []}
+               />
+            </>
+         )}
          <Caption>História</Caption>
          <button onClick={setOpen}>
             Clique aqui para ver a história do centro

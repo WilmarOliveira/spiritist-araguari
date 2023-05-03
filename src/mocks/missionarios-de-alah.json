@@ -1,0 +1,50 @@
+{
+    "id": "missionarios-de-alah",
+    "title": "Seara Espírita Missionários de Alah",
+    "mainActivities": [
+        {
+            "id": 1,
+            "weekday": "Terça-Feira",
+            "time": "08:00",
+            "activities": "Tratamento Espiritual e Passe"
+        },
+        {
+            "id": 2,
+            "weekday": "Terça-Feira",
+            "time": "19:30",
+            "activities": "Passe"
+        },
+        {
+            "id": 3,
+            "weekday": "Quinta-Feira",
+            "time": "19:30",
+            "activities": "Estudos da doutrina"
+        },
+        {
+            "id": 4,
+            "weekday": "Sexta-Feira",
+            "time": "08:00",
+            "activities": "Tratamento Espiritual e Passe"
+        },
+        {
+            "id": 5,
+            "weekday": "Sexta-Feira",
+            "time": "19:30",
+            "activities": "Passe"
+        }
+    ],
+    "otherActivities": [
+        {
+            "id": 1,
+            "place": "Seara Espírita Missionários de Alah",
+            "weekday": "Sexta-Feira",
+            "time": "??",
+            "activities": "Distribuição de Sopa"
+        }
+    ],
+    "history": "",
+    "contact": {
+        "name": "Exemplo",
+        "phone": "(34) 9 9999-9999"
+    }
+}
