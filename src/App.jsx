@@ -1,12 +1,15 @@
 import React from 'react'
 import { Theme } from './theme/Theme'
 import { AppRoutes } from './routes'
+import { SpiritistsCenterProvider } from './context/SpiritistsCenterContext'
 
 function App() {
    return (
-      <Theme>
-         <AppRoutes />
-      </Theme>
+      <SpiritistsCenterProvider>
+         <Theme>
+            <AppRoutes />
+         </Theme>
+      </SpiritistsCenterProvider>
    )
 }
 

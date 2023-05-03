@@ -1,0 +1,44 @@
+{
+    "id": "caminho-da-luz",
+    "title": "Centro Espírita Caminho da Luz",
+    "mainActivities": [
+        {
+            "id": 1,
+            "weekday": "Segunda a Sexta",
+            "time": "13:00",
+            "activities": "Passe"
+        },
+        {
+            "id": 2,
+            "weekday": "Terça-Feira",
+            "time": "19:30",
+            "activities": "Estudo do Evangelho e Passe"
+        },
+        {
+            "id": 3,
+            "weekday": "Quinta-Feira",
+            "time": "19:30",
+            "activities": "Estudo do Evangelho e Passe"
+        },
+        {
+            "id": 4,
+            "weekday": "Sábado",
+            "time": "19:30",
+            "activities": "Palestra e Passe"
+        }
+    ],
+    "otherActivities": [
+        {
+            "id": 1,
+            "place": "Galpão da Sopa",
+            "weekday": "Domingo",
+            "time": "12:00",
+            "activities": "Distribuição da Sopa"
+        }
+    ],
+    "history": "",
+    "contact": {
+        "name": "Exemplo",
+        "phone": "(34) 9 9999-9999"
+    }
+}

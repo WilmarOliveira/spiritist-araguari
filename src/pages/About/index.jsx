@@ -1,30 +1,44 @@
 import { useParams } from 'react-router-dom'
 import { TableActivities } from '../../components/TableActivities'
 import { TableOtherActivities } from '../../components/TableOtherActivities'
-import mainActivities from '../../mocks/mainActivities.json'
-import otherActivities from '../../mocks/otherActivities.json'
 import { Caption, ContainerAbout } from './styles'
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { ScrollDialog } from '../../components/ScrollDialog'
+import { SpiritistsCenterContext } from '../../context/SpiritistsCenterContext'
 
 export const About = () => {
+   const { spiritistCenter, handleOnSelectedSpiritistCenter } = useContext(
+      SpiritistsCenterContext
+   )
    const { id } = useParams()
    const [open, setOpen] = useState(false)
 
+   useEffect(() => {
+      console.log(id)
+      handleOnSelectedSpiritistCenter(id)
+   }, [])
+
    return (
       <ContainerAbout>
-         <h3>Centro Espírita Caminho da Luz</h3>
+         <h3>{spiritistCenter?.title}</h3>
          <Caption>Atividades no centro</Caption>
-         <TableActivities rows={mainActivities[id] || []} />
+         <TableActivities rows={spiritistCenter?.mainActivities || []} />
          <Caption>Outras Atividades</Caption>
-         <TableOtherActivities rows={otherActivities[id] || []} />
+         <TableOtherActivities rows={spiritistCenter?.otherActivities || []} />
          <Caption>História</Caption>
          <button onClick={setOpen}>
             Clique aqui para ver a história do centro
          </button>
          <Caption>Contato</Caption>
-         <span>Nome: (34) 0000-0000</span>
-         <ScrollDialog open={open} setOpen={setOpen} />
+         <span>
+            {spiritistCenter?.contact?.name}: {spiritistCenter?.contact?.phone}
+         </span>
+         <ScrollDialog
+            open={open}
+            setOpen={setOpen}
+            title={spiritistCenter?.title}
+            history={spiritistCenter?.history}
+         />
       </ContainerAbout>
    )
 }

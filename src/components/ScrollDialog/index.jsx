@@ -7,17 +7,8 @@ import DialogTitle from '@mui/material/DialogTitle'
 import { useRef } from 'react'
 import { Typography } from '@mui/material'
 
-export const ScrollDialog = ({ open, setOpen }) => {
+export const ScrollDialog = ({ open, setOpen, history, title }) => {
    const descriptionElementRef = useRef(null)
-   const generatedDescription = [...new Array(50)]
-      .map(() => {
-         return `Cras mattis consectetur purus sit amet fermentum. Cras
-          justo odio, dapibus ac facilisis in, egestas eget quam.
-          Morbi leo risus, porta ac consectetur ac, vestibulum at
-          eros. Praesent commodo cursus magna, vel scelerisque
-          nisl consectetur et.`
-      })
-      .join('\n')
 
    useEffect(() => {
       if (open) {
@@ -36,14 +27,14 @@ export const ScrollDialog = ({ open, setOpen }) => {
          aria-labelledby="scroll-dialog-title"
          aria-describedby="scroll-dialog-description"
       >
-         <DialogTitle id="scroll-dialog-title">Subscribe</DialogTitle>
+         <DialogTitle id="scroll-dialog-title">{title}</DialogTitle>
          <DialogContent dividers={true}>
             <DialogContentText
                id="scroll-dialog-description"
                ref={descriptionElementRef}
                tabIndex={-1}
             >
-               <Typography gutterBottom>{generatedDescription}</Typography>
+               <Typography gutterBottom>{history}</Typography>
             </DialogContentText>
          </DialogContent>
          <DialogActions>
