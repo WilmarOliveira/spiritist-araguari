@@ -10,7 +10,7 @@ export const Card = ({ name, image, id }) => {
    const navigate = useNavigate()
 
    const handleOnNavigate = () => {
-      navigate(`/centro/${id}`)
+      navigate(`/about/${id}`)
    }
 
    return (
