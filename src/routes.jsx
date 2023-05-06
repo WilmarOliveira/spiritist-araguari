@@ -10,8 +10,8 @@ export const AppRoutes = () => {
          <Routes>
             <Route element={<Layout />}>
                <Route path="/" element={<Home />} />
-               <Route path="/about" element={<About />} />
-               <Route path="/center/:id" element={<Center />} />
+               <Route path="/sobre" element={<About />} />
+               <Route path="/centro/:id" element={<Center />} />
             </Route>
          </Routes>
       </BrowserRouter>

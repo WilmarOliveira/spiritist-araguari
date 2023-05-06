@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom'
 import { ContainerHeader, TitleHeader } from './styles'
+import MenuOptions from '../Menu'
 
 export const Header = () => {
    return (
       <ContainerHeader>
-         <TitleHeader to={'/'}>Araguari Espírita</TitleHeader>
+         <TitleHeader>Araguari Espírita</TitleHeader>
+         <MenuOptions />
       </ContainerHeader>
    )
 }
