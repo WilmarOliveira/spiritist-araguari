@@ -1,49 +1,14 @@
-import { useParams } from 'react-router-dom'
-import { TableActivities } from '../../components/TableActivities'
-import { TableOtherActivities } from '../../components/TableOtherActivities'
-import { Caption, ContainerAbout } from './styles'
-import { useContext, useEffect, useState } from 'react'
-import { ScrollDialog } from '../../components/ScrollDialog'
-import { SpiritistsCenterContext } from '../../context/SpiritistsCenterContext'
+import { Caption, ContainerDefault } from '../../theme/globalStyle'
 
 export const About = () => {
-   const { spiritistCenter, handleOnSelectedSpiritistCenter } = useContext(
-      SpiritistsCenterContext
-   )
-   const { id } = useParams()
-   const [open, setOpen] = useState(false)
-
-   useEffect(() => {
-      handleOnSelectedSpiritistCenter(id)
-   }, [])
-
    return (
-      <ContainerAbout>
-         <h3>{spiritistCenter?.title}</h3>
-         <Caption>Atividades no centro</Caption>
-         <TableActivities rows={spiritistCenter?.mainActivities || []} />
-         {(spiritistCenter.otherActivities || []).length > 0 && (
-            <>
-               <Caption>Outras Atividades</Caption>
-               <TableOtherActivities
-                  rows={spiritistCenter?.otherActivities || []}
-               />
-            </>
-         )}
-         <Caption>História</Caption>
-         <button onClick={setOpen}>
-            Clique aqui para ver a história do centro
-         </button>
-         <Caption>Contato</Caption>
-         <span>
-            {spiritistCenter?.contact?.name}: {spiritistCenter?.contact?.phone}
-         </span>
-         <ScrollDialog
-            open={open}
-            setOpen={setOpen}
-            title={spiritistCenter?.title}
-            history={spiritistCenter?.history}
-         />
-      </ContainerAbout>
+      <ContainerDefault>
+         <Caption>Lista de Centros Espíritas na cidade de Araguari</Caption>
+         <p>
+            Esta página tem como objetivos listar os centros espíritas que
+            estudam Kardec na cidade de Araguari/MG. Além de informar sobre suas
+            principais atividades, horários e locais.
+         </p>
+      </ContainerDefault>
    )
 }

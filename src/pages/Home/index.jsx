@@ -3,7 +3,7 @@ import { ContainerCard } from './styles'
 import { useContext } from 'react'
 import { SpiritistsCenterContext } from '../../context/SpiritistsCenterContext'
 
-export const MainContent = () => {
+export const Home = () => {
    const { spiritistCollection } = useContext(SpiritistsCenterContext)
 
    return (

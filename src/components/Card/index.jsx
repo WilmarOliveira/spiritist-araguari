@@ -3,14 +3,13 @@ import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
 import { StyledCard } from './styles'
-import { Button } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 
 export const Card = ({ name, image, id }) => {
    const navigate = useNavigate()
 
    const handleOnNavigate = () => {
-      navigate(`/about/${id}`)
+      navigate(`/center/${id}`)
    }
 
    return (

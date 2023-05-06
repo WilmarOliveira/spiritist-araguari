@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
    * {
@@ -30,4 +30,16 @@ export default createGlobalStyle`
             opacity: 0.8;
         }
     }
+`
+
+export const ContainerDefault = styled.div`
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 30px;
+`
+export const Caption = styled.h4`
+   padding-top: 20px;
+   padding-bottom: 10px;
 `

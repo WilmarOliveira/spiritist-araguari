@@ -4,7 +4,7 @@ import { ContainerHeader, TitleHeader } from './styles'
 export const Header = () => {
    return (
       <ContainerHeader>
-         <TitleHeader to={'/main'}>Araguari Espírita</TitleHeader>
+         <TitleHeader to={'/'}>Araguari Espírita</TitleHeader>
       </ContainerHeader>
    )
 }
