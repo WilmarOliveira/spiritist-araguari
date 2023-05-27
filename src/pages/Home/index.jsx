@@ -4,7 +4,16 @@ import { useContext } from 'react'
 import { SpiritistsCenterContext } from '../../context/SpiritistsCenterContext'
 
 export const Home = () => {
-   const { spiritistCollection } = useContext(SpiritistsCenterContext)
+   const { spiritistCollection, isLoading } = useContext(
+      SpiritistsCenterContext
+   )
+
+   if (isLoading)
+      return (
+         <ContainerCard>
+            <div>Loading...</div>
+         </ContainerCard>
+      )
 
    return (
       <ContainerCard>

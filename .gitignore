@@ -1,5 +1,7 @@
 build
 dist
 node_modules
+.env
+environment.js
 
 package-lock.json
