@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import { IconButton, ListItemIcon, ListItemText } from '@mui/material'
@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom'
 
 export default function MenuOptions() {
    const navigate = useNavigate()
+   const menuRef = useRef(null)
    const [anchorEl, setAnchorEl] = useState(null)
    const open = Boolean(anchorEl)
    const handleClick = (event) => {
@@ -19,8 +20,18 @@ export default function MenuOptions() {
       setAnchorEl(null)
    }
 
+   useEffect(() => {
+      function handler(event) {
+         if (!menuRef.current?.contains(event.target)) {
+            setAnchorEl(null)
+         }
+      }
+      window.addEventListener('click', handler)
+      return () => window.removeEventListener('click', handler)
+   }, [])
+
    return (
-      <div style={{ paddingTop: '5px' }}>
+      <div style={{ paddingTop: '5px' }} ref={menuRef}>
          <IconButton
             style={{ color: '#fff' }}
             id="basic-button"
@@ -35,7 +46,6 @@ export default function MenuOptions() {
             id="basic-menu"
             anchorEl={anchorEl}
             open={open}
-            onClose={handleClose}
             MenuListProps={{
                'aria-labelledby': 'basic-button',
             }}

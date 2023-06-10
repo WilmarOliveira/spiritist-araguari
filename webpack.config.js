@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -9,6 +10,17 @@ module.exports = {
       publicPath: '/',
    },
    plugins: [
+      new webpack.ProvidePlugin({
+         process: 'process/browser',
+      }),
+      new webpack.DefinePlugin({
+         'process.env.API_KEY': JSON.stringify(process.env.API_KEY),
+         'process.env.MESSASING_SENDER_ID': JSON.stringify(
+            process.env.MESSASING_SENDER_ID
+         ),
+         'process.env.APP_ID': JSON.stringify(process.env.APP_ID),
+         'process.env.DATABASE_URL': JSON.stringify(process.env.DATABASE_URL),
+      }),
       new HtmlWebpackPlugin({
          template: path.join(__dirname, 'public', 'index.html'),
       }),
@@ -30,6 +42,6 @@ module.exports = {
       ],
    },
    resolve: {
-      extensions: ['*', '.js', '.jsx'],
+      extensions: ['.*', '.js', '.jsx'],
    },
 }
