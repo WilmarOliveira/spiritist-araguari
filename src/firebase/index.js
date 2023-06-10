@@ -5,7 +5,7 @@ import {
    MESSASING_SENDER_ID,
    APP_ID,
    DATABASE_URL,
-} from '../../environment'
+} from '../../environments'
 
 const firebaseConfig = {
    apiKey: API_KEY,
